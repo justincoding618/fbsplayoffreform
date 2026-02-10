@@ -16,4 +16,4 @@ An interactive web application exploring alternative playoff formats for Divisio
 
 ## Live Demo
 
-I am still working out the issues regarding the corresponding pages. I will have the main link here when the entire website is ready.
+You can check out the home website here: https://justincoding618.github.io/fbsplayoffreform/
