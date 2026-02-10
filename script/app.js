@@ -1,5 +1,5 @@
 // Loads Navigation Bar into each Web Page
-fetch("reusable/nav.html")
+fetch("https://justincoding618.github.io/fbsplayoffreform/reusable/nav.html")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`Failed to load nav: ${response.status}`);
@@ -15,7 +15,9 @@ fetch("reusable/nav.html")
     console.error("Error loading navigation:", error);
   });
 
-fetch("reusable/season-nav.html")
+fetch(
+  "https://justincoding618.github.io/fbsplayoffreform/reusable/season-nav.html",
+)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`Failed to load nav: ${response.status}`);
@@ -32,7 +34,9 @@ fetch("reusable/season-nav.html")
   });
 
 // Loads NY6 Bowl Table
-fetch("reusable/newyearsixtable.html")
+fetch(
+  "https://justincoding618.github.io/fbsplayoffreform/reusable/newyearsixtable.html",
+)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`Failed to load nav: ${response.status}`);
@@ -50,7 +54,9 @@ fetch("reusable/newyearsixtable.html")
   });
 
 // Loads Home Field Table
-fetch("reusable/homefield.html")
+fetch(
+  "https://justincoding618.github.io/fbsplayoffreform/reusable/homefield.html",
+)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`Failed to load nav: ${response.status}`);
