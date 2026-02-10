@@ -3,14 +3,17 @@
 An interactive web application exploring alternative playoff formats for Division I FBS football.
 
 ## Features
+
 - 32-team bracket with regional pods
 - Automatic bids for all Division I FBS conferences
 - Committee-simulated at-large selection
 - Historical season analysis
 
 ## Tech Stack
+
 - HTML5, CSS3, JavaScript
 - Deployed on GitHub Pages
 
 ## Live Demo
-I am still working out the issues regarding the corresponding pages.  I will have it here when it is finished.
+
+I am still working out the issues regarding the corresponding pages. I will have the main link here when the entire website is ready.
