@@ -8,6 +8,7 @@ An interactive web application exploring alternative playoff formats for Divisio
 - Automatic bids for all Division I FBS conferences
 - Committee-simulated at-large selection
 - Historical season analysis
+- Bracket CSS and HTML was based on https://codepen.io/grozzzny/pen/GRZNxqW
 
 ## Tech Stack
 
