@@ -1,0 +1,90 @@
+.bracket {
+  display: inline-flex; /* shrink-wraps to content width */
+  align-items: stretch;
+  min-height: 700px;
+  position: relative; /* SVG overlay anchors here */
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* NO flex:1 — each round is only as wide as its widest match */
+  width: 280px; /* fixed column width, consistent across all rounds */
+  flex-shrink: 0;
+  margin-right: 60px; /* gap between rounds for connector lines */
+}
+
+.round:last-child {
+  margin-right: 0;
+}
+
+.match {
+  position: relative;
+  border: 1.5px solid #c8d4e0;
+  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.81rem;
+  min-height: 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.team-row:last-of-type {
+  border-bottom: none;
+}
+
+.team-row.home {
+  background-color: #eaf3ec;
+  font-weight: 600;
+}
+
+.seed-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  min-width: 18px;
+  color: #1a3a5c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.team-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-record {
+  margin-left: auto;
+  color: #9ab0c4;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+}
+
+.game-location {
+  background: #f0f4f8;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.73rem;
+  color: #4a6a8a;
+  border-top: 1px dashed #c8d4e0;
+  text-align: center;
+  font-style: italic;
+}
+
+.match.championship {
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.25);
+}
