@@ -1,77 +1,135 @@
 // Loads Navigation Bar into each Web Page
-fetch("https://justincoding618.github.io/fbsplayoffreform/reusable/nav.html")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Failed to load nav: ${response.status}`);
-    }
-    return response.text();
-  })
-  .then((navHTML) => {
-    document.getElementById("navbar-placeholder").innerHTML = navHTML;
-    // Initialize navbar functionality AFTER it's loaded
-    initializeNavbar();
-  })
-  .catch((error) => {
-    console.error("Error loading navigation:", error);
-  });
+const loadNavigationBar = function (htmlFile, elementName) {
+  fetch(htmlFile)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((HTML) => {
+      const Element = document.getElementById(elementName);
+      if (Element) {
+        document.getElementById(elementName).innerHTML = HTML;
+        // Initialize navbar functionality AFTER it's loaded
+        initializeNavbar();
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading navigation:", error);
+    });
+};
 
-fetch(
+loadNavigationBar(
+  "https://justincoding618.github.io/fbsplayoffreform/reusable/nav.html",
+  "navbar-placeholder",
+);
+loadNavigationBar(
   "https://justincoding618.github.io/fbsplayoffreform/reusable/season-nav.html",
-)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Failed to load nav: ${response.status}`);
-    }
-    return response.text();
-  })
-  .then((navHTML) => {
-    document.getElementById("season-nav").innerHTML = navHTML;
-    // Initialize navbar functionality AFTER it's loaded
-    initializeNavbar();
-  })
-  .catch((error) => {
-    console.error("Error loading navigation:", error);
-  });
+  "season-nav",
+);
 
-// Loads NY6 Bowl Table
-fetch(
+const loadTable = function (htmlFile, elementName) {
+  fetch(htmlFile)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((HTML) => {
+      const Element = document.getElementById(elementName);
+      if (Element) {
+        Element.innerHTML = HTML;
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading table:", error);
+    });
+};
+
+loadTable(
   "https://justincoding618.github.io/fbsplayoffreform/reusable/newyearsixtable.html",
-)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Failed to load nav: ${response.status}`);
-    }
-    return response.text();
-  })
-  .then((ny6HTML) => {
-    const ny6Element = document.getElementById("ny6table");
-    if (ny6Element) {
-      ny6Element.innerHTML = ny6HTML;
-    }
-  })
-  .catch((error) => {
-    console.error("Error loading NY6 table:", error);
-  });
-
-// Loads Home Field Table
-fetch(
+  "ny6table",
+);
+loadTable(
   "https://justincoding618.github.io/fbsplayoffreform/reusable/homefield.html",
-)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Failed to load nav: ${response.status}`);
-    }
-    return response.text();
-  })
-  .then((homefieldHTML) => {
-    const homefieldElement = document.getElementById("homefield");
-    if (homefieldElement) {
-      homefieldElement.innerHTML = homefieldHTML;
-    }
-  })
-  .catch((error) => {
-    console.error("Error loading homefield table:", error);
-  });
+  "homefield",
+);
+
+// fetch("https://justincoding618.github.io/fbsplayoffreform/reusable/nav.html")
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error(`Failed to load nav: ${response.status}`);
+//     }
+//     return response.text();
+//   })
+//   .then((navHTML) => {
+//     document.getElementById("navbar-placeholder").innerHTML = navHTML;
+//     // Initialize navbar functionality AFTER it's loaded
+//     initializeNavbar();
+//   })
+//   .catch((error) => {
+//     console.error("Error loading navigation:", error);
+//   });
+
+// fetch(
+//   "https://justincoding618.github.io/fbsplayoffreform/reusable/season-nav.html",
+// )
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error(`Failed to load nav: ${response.status}`);
+//     }
+//     return response.text();
+//   })
+//   .then((navHTML) => {
+//     document.getElementById("season-nav").innerHTML = navHTML;
+//     // Initialize navbar functionality AFTER it's loaded
+//     initializeNavbar();
+//   })
+//   .catch((error) => {
+//     console.error("Error loading navigation:", error);
+//   });
+
+// // Loads NY6 Bowl Table
+// fetch(
+//   "https://justincoding618.github.io/fbsplayoffreform/reusable/newyearsixtable.html",
+// )
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error(`Failed to load nav: ${response.status}`);
+//     }
+//     return response.text();
+//   })
+//   .then((ny6HTML) => {
+//     const ny6Element = document.getElementById("ny6table");
+//     if (ny6Element) {
+//       ny6Element.innerHTML = ny6HTML;
+//     }
+//   })
+//   .catch((error) => {
+//     console.error("Error loading NY6 table:", error);
+//   });
+
+// // Loads Home Field Table
+// fetch(
+//   "https://justincoding618.github.io/fbsplayoffreform/reusable/homefield.html",
+// )
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error(`Failed to load nav: ${response.status}`);
+//     }
+//     return response.text();
+//   })
+//   .then((homefieldHTML) => {
+//     const homefieldElement = document.getElementById("homefield");
+//     if (homefieldElement) {
+//       homefieldElement.innerHTML = homefieldHTML;
+//     }
+//   })
+//   .catch((error) => {
+//     console.error("Error loading homefield table:", error);
+//   });
 
 // Initialize navbar functionality after it's loaded
 function initializeNavbar() {
