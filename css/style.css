@@ -29,8 +29,69 @@ header {
 
 .container {
   max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.image-container {
+  padding: 0 2rem;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+.float-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.box {
+  margin: 10px 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #d3d1d1;
+  box-shadow: 0px 0px 3px 2px #ffffff;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 h1 {
@@ -59,8 +120,6 @@ h2 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  border-bottom: 3px solid #009cde;
-  padding-bottom: 0.5rem;
 }
 
 p {
@@ -71,6 +130,14 @@ p {
 ul {
   margin-left: 2rem;
   margin-bottom: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
 }
 /* ==================== NAVBAR STYLES ==================== */
 
@@ -188,6 +255,15 @@ ul {
 
 /* ==================== MOBILE STYLES ==================== */
 @media screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    flex: 1;
+  }
+  img {
+    max-width: 40%;
+    height: auto;
+    flex-shrink: 0;
+  }
   /* Navbar adjustments - USE FLEXBOX */
   .navbar {
     position: relative;
@@ -326,7 +402,7 @@ td {
 
 tr:hover {
   background-color: #f8f9fa;
-  color: black;
+  color: #000;
 }
 
 .danger {
