@@ -1,38 +1,144 @@
 const base = "/fbsplayoffreform";
 
 const seasons = [
-  { year: "1998-99", path: `${base}/season-archives/bcs-era/1998.html` },
-  { year: "1999-2000", path: `${base}/season-archives/bcs-era/1999.html` },
-  { year: "2000-01", path: `${base}/season-archives/bcs-era/2000.html` },
-  { year: "2001-02", path: `${base}/season-archives/bcs-era/2001.html` },
-  { year: "2002-03", path: `${base}/season-archives/bcs-era/2002.html` },
-  { year: "2003-04", path: `${base}/season-archives/bcs-era/2003.html` },
-  { year: "2004-05", path: `${base}/season-archives/bcs-era/2004.html` },
-  { year: "2005-06", path: `${base}/season-archives/bcs-era/2005.html` },
-  { year: "2006-07", path: `${base}/season-archives/bcs-era/2006.html` },
-  { year: "2007-08", path: `${base}/season-archives/bcs-era/2007.html` },
-  { year: "2008-09", path: `${base}/season-archives/bcs-era/2008.html` },
-  { year: "2009-10", path: `${base}/season-archives/bcs-era/2009.html` },
-  { year: "2010-11", path: `${base}/season-archives/bcs-era/2010.html` },
-  { year: "2011-12", path: `${base}/season-archives/bcs-era/2011.html` },
-  { year: "2012-13", path: `${base}/season-archives/bcs-era/2012.html` },
-  { year: "2013-14", path: `${base}/season-archives/bcs-era/2013.html` },
-  { year: "2014-15", path: `${base}/season-archives/4-team-cfp-era/2014.html` },
-  { year: "2015-16", path: `${base}/season-archives/4-team-cfp-era/2015.html` },
-  { year: "2016-17", path: `${base}/season-archives/4-team-cfp-era/2016.html` },
-  { year: "2017-18", path: `${base}/season-archives/4-team-cfp-era/2017.html` },
-  { year: "2018-19", path: `${base}/season-archives/4-team-cfp-era/2018.html` },
-  { year: "2019-20", path: `${base}/season-archives/4-team-cfp-era/2019.html` },
-  { year: "2020-21", path: `${base}/season-archives/4-team-cfp-era/2020.html` },
-  { year: "2021-22", path: `${base}/season-archives/4-team-cfp-era/2021.html` },
-  { year: "2022-23", path: `${base}/season-archives/4-team-cfp-era/2022.html` },
-  { year: "2023-24", path: `${base}/season-archives/4-team-cfp-era/2023.html` },
+  {
+    year: "1998-99",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/1998.html`,
+  },
+  {
+    year: "1999-2000",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/1999.html`,
+  },
+  {
+    year: "2000-01",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/2000.html`,
+  },
+  {
+    year: "2001-02",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/2001.html`,
+  },
+  {
+    year: "2002-03",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/2002.html`,
+  },
+  {
+    year: "2003-04",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/2003.html`,
+  },
+  {
+    year: "2004-05",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/2004.html`,
+  },
+  {
+    year: "2005-06",
+    navTitle: "Division I-A Playoffs",
+    path: `${base}/season-archives/bcs-era/2005.html`,
+  },
+  {
+    year: "2006-07",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2006.html`,
+  },
+  {
+    year: "2007-08",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2007.html`,
+  },
+  {
+    year: "2008-09",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2008.html`,
+  },
+  {
+    year: "2009-10",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2009.html`,
+  },
+  {
+    year: "2010-11",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2010.html`,
+  },
+  {
+    year: "2011-12",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2011.html`,
+  },
+  {
+    year: "2012-13",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2012.html`,
+  },
+  {
+    year: "2013-14",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/bcs-era/2013.html`,
+  },
+  {
+    year: "2014-15",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2014.html`,
+  },
+  {
+    year: "2015-16",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2015.html`,
+  },
+  {
+    year: "2016-17",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2016.html`,
+  },
+  {
+    year: "2017-18",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2017.html`,
+  },
+  {
+    year: "2018-19",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2018.html`,
+  },
+  {
+    year: "2019-20",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2019.html`,
+  },
+  {
+    year: "2020-21",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2020.html`,
+  },
+  {
+    year: "2021-22",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2021.html`,
+  },
+  {
+    year: "2022-23",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2022.html`,
+  },
+  {
+    year: "2023-24",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/4-team-cfp-era/2023.html`,
+  },
   {
     year: "2024-25",
+    navTitle: "Division I FBS Playoffs",
     path: `${base}/season-archives/12-team-cfp-era/2024.html`,
   },
   {
     year: "2025-26",
+    navTitle: "Division I FBS Playoffs",
     path: `${base}/season-archives/12-team-cfp-era/2025.html`,
   },
 ];
@@ -49,7 +155,7 @@ const buildSeasonNavInfobox = function () {
   const nav = document.createElement("div");
   nav.className = "infobox-nav";
   nav.innerHTML = `
-    <span class="infobox-nav-title">FBS Playoffs</span>
+    <span class="infobox-nav-title">${curr.navTitle}</span>
     <div class="infobox-nav-links">
       ${prev ? `<a href="${prev.path}">« ${prev.year}</a>` : `<span class="nav-disabled"></span>`}
       ${next ? `<a href="${next.path}">${next.year} »</a>` : `<span class="nav-disabled"></span>`}
