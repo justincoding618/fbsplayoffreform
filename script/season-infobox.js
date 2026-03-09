@@ -49,7 +49,7 @@ const buildSeasonNavInfobox = function () {
   const nav = document.createElement("div");
   nav.className = "infobox-nav";
   nav.innerHTML = `
-    <span class="infobox-nav-title">FBS Season Archives</span>
+    <span class="infobox-nav-title">FBS Playoff Seasons</span>
     <div class="infobox-nav-links">
       ${prev ? `<a href="${prev.path}">« ${prev.year}</a>` : `<span class="nav-disabled"></span>`}
       ${next ? `<a href="${next.path}">${next.year} »</a>` : `<span class="nav-disabled"></span>`}
