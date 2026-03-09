@@ -1,4 +1,4 @@
-const base = "https://justincoding618.github.io/fbsplayoffreform/";
+const base = "https://justincoding618.github.io/fbsplayoffreform";
 
 const seasons = [
   { year: 1998, path: `${base}/season-archives/bcs-era/1998.html` },
