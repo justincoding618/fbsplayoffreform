@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family:
-    "Bahnschrift", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: "Bahnschrift", "Roboto", Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #000;
   background-color: #f5f5f5;
@@ -22,81 +21,15 @@ article {
 
 header {
   font-family: "Bahnschrift Bold";
+  font-size: 8rem;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: white;
   padding: 2rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.image-container {
-  padding: 0 2rem;
-}
-
-.float-right {
-  float: right;
-  margin-left: 1rem;
-}
-
-.float-center {
-  display: block;
-  margin: 0 auto;
-}
-
-.float-left {
-  float: left;
-  margin-right: 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.box {
-  margin: 10px 20px;
-  padding: 15px;
-  border-radius: 8px;
-  border: 2px solid #d3d1d1;
-  box-shadow: 0px 0px 3px 2px #ffffff;
-  position: relative;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-}
-
-.w-25 {
-  width: 25%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-75 {
-  width: 75%;
-}
-
-.w-90 {
-  width: 90%;
-}
-
-.w-100 {
-  width: 100%;
-}
-
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
@@ -118,11 +51,14 @@ main {
 
 h2 {
   color: #1a1a2e;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
-
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 p {
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
@@ -131,248 +67,6 @@ p {
 ul {
   margin-left: 2rem;
   margin-bottom: 1.5rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-a {
-  color: #009cde;
-  text-decoration: none;
-}
-/* ==================== NAVBAR STYLES ==================== */
-
-/* Base Container */
-.mobile-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-  overflow: visible; /* Changed from hidden */
-  background-color: #000;
-  position: sticky;
-}
-
-/* ==================== DESKTOP STYLES (Default) ==================== */
-
-/* Hamburger Icon - HIDDEN on desktop */
-.navbar .icon {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 14px 16px;
-  font-size: 24px;
-  color: white;
-  text-decoration: none;
-  z-index: 10;
-}
-
-/* Desktop Navigation Links - VISIBLE and HORIZONTAL */
-.navbar-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-}
-
-.navbar a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  background-color: #009cde;
-  color: #fff;
-}
-
-/* Subnav (Dropdown) */
-.subnav {
-  position: relative;
-  display: inline-block;
-}
-
-.subnav .subnavbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: transparent;
-  font-family: inherit;
-  margin: 0;
-  cursor: pointer;
-  display: block;
-}
-
-.subnav .subnavbtn:hover {
-  background-color: #009cde;
-  color: #fff;
-}
-
-/* Dropdown Content - DESKTOP */
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #009cde;
-  min-width: 250px;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.subnav-content a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
-}
-
-.subnav-content a:hover {
-  background-color: #009cde;
-  color: #fff;
-}
-
-/* DESKTOP HOVER - Show dropdown */
-@media screen and (min-width: 769px) {
-  .subnav:hover .subnav-content {
-    display: block !important;
-    background-color: #000;
-  }
-}
-
-/* ==================== MOBILE STYLES ==================== */
-@media screen and (max-width: 768px) {
-  .box {
-    width: 100%;
-    flex: 1;
-  }
-  img {
-    max-width: 40%;
-    height: auto;
-    flex-shrink: 0;
-  }
-  /* Navbar adjustments - USE FLEXBOX */
-  .navbar {
-    position: relative;
-    min-height: 50px;
-    display: flex;
-    justify-content: flex-end; /* Push hamburger to the right */
-    align-items: flex-start;
-  }
-
-  /* Show hamburger icon - NO ABSOLUTE POSITIONING */
-  .navbar .icon {
-    display: block !important;
-    position: relative !important; /* Changed from absolute */
-    padding: 10px 15px;
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    z-index: 1001;
-    background-color: transparent;
-    border: 2px solid transparent;
-    order: 2; /* Force it to be last in flex order */
-    margin-left: auto; /* Push to the right */
-  }
-
-  .navbar .icon:hover,
-  .navbar .icon:active {
-    background-color: #000;
-    color: #fff;
-    border-color: #fff;
-  }
-
-  /* Hide navigation links by default on mobile */
-  .navbar-links {
-    display: none !important;
-    flex-direction: column;
-    width: 100%;
-    background-color: #000;
-    position: absolute;
-    top: 50px; /* Below the navbar */
-    left: 0;
-    order: 1;
-  }
-
-  /* Show navigation when active */
-  .navbar-links.responsive {
-    display: flex !important;
-  }
-
-  /* Stack all items vertically */
-  .navbar a,
-  .subnav {
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid #000;
-  }
-
-  .navbar a {
-    padding: 14px 16px;
-  }
-
-  .subnav .subnavbtn {
-    width: 100%;
-    text-align: left;
-    padding: 14px 16px;
-  }
-
-  /* Mobile dropdown - EXPLICITLY PREVENT HOVER */
-  .subnav-content {
-    position: relative;
-    display: none !important;
-    width: 100%;
-    min-width: auto;
-    box-shadow: none;
-    background-color: #000;
-  }
-
-  .subnav-content.show {
-    display: block !important;
-  }
-
-  /* CRITICAL: Prevent hover from triggering on mobile */
-  .subnav:hover .subnav-content {
-    display: none !important;
-  }
-
-  .subnav:hover .subnav-content.show {
-    display: block !important;
-  }
-
-  /* Rotate caret icon when dropdown active */
-  .subnavbtn i.fa-caret-down {
-    float: right;
-    transition: transform 0.3s;
-  }
-
-  .subnavbtn.active i.fa-caret-down {
-    transform: rotate(180deg);
-  }
-}
-
-.active {
-  background-color: #009cde;
-  color: white;
 }
 
 li {
@@ -522,4 +216,374 @@ details[open] summary {
   padding: 20px;
   border-radius: 5px;
   margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container p {
+  font-size: 1rem;
+}
+
+.image-container {
+  padding: 0 2rem;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+.float-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.box {
+  margin: 10px 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #d3d1d1;
+  box-shadow: 0px 0px 3px 2px #ffffff;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+a {
+  color: #009cde;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:on-click {
+  color: #16213e;
+}
+/* ==================== NAVBAR STYLES ==================== */
+
+/* Base Container */
+.mobile-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  overflow: visible; /* Changed from hidden */
+  background-color: #000;
+  position: sticky;
+}
+
+/* ==================== DESKTOP STYLES (Default) ==================== */
+
+/* Hamburger Icon - HIDDEN on desktop */
+.navbar .icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 14px 16px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  z-index: 10;
+}
+
+/* Desktop Navigation Links - VISIBLE and HORIZONTAL */
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #009cde;
+  color: #fff;
+}
+
+/* Subnav (Dropdown) */
+.subnav {
+  position: relative;
+  display: inline-block;
+}
+
+.subnav .subnavbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.subnav .subnavbtn:hover {
+  background-color: #009cde;
+  color: #fff;
+}
+
+/* Dropdown Content - DESKTOP */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #009cde;
+  min-width: 250px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.subnav-content a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.subnav-content a:hover {
+  background-color: #009cde;
+  color: #fff;
+}
+
+.active {
+  background-color: #009cde;
+  color: white;
+}
+
+/* DESKTOP HOVER - Show dropdown */
+@media screen and (min-width: 769px) {
+  .subnav:hover .subnav-content {
+    display: block !important;
+    background-color: #000;
+  }
+}
+
+/* ==================== MOBILE STYLES ==================== */
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  ul {
+    font-size: 14px;
+  }
+  .box {
+    font-size: 12px;
+    width: 50%;
+    flex: 1;
+  }
+  .box p {
+    font-size: 12px;
+  }
+  .box ul {
+    font-size: 12px;
+  }
+  img {
+    max-width: 60%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  th {
+    font-size: 12px;
+  }
+  td {
+    font-size: 12px;
+  }
+  /* Navbar adjustments - USE FLEXBOX */
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-end; /* Push hamburger to the right */
+    align-items: flex-start;
+  }
+
+  /* Show hamburger icon - NO ABSOLUTE POSITIONING */
+  .navbar .icon {
+    display: block !important;
+    position: relative !important; /* Changed from absolute */
+    padding: 10px 15px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    z-index: 1001;
+    background-color: transparent;
+    border: 2px solid transparent;
+    order: 2; /* Force it to be last in flex order */
+    margin-left: auto; /* Push to the right */
+  }
+
+  .navbar .icon:hover,
+  .navbar .icon:active {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  /* Hide navigation links by default on mobile */
+  .navbar-links {
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 50px; /* Below the navbar */
+    left: 0;
+    order: 1;
+  }
+
+  /* Show navigation when active */
+  .navbar-links.responsive {
+    display: flex !important;
+  }
+
+  /* Stack all items vertically */
+  .navbar a,
+  .subnav {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #000;
+  }
+
+  .navbar a {
+    padding: 14px 16px;
+  }
+
+  .subnav .subnavbtn {
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+  }
+
+  /* Mobile dropdown - EXPLICITLY PREVENT HOVER */
+  .subnav-content {
+    position: relative;
+    display: none !important;
+    width: 100%;
+    min-width: auto;
+    box-shadow: none;
+    background-color: #000;
+  }
+
+  .subnav-content.show {
+    display: block !important;
+  }
+
+  /* CRITICAL: Prevent hover from triggering on mobile */
+  .subnav:hover .subnav-content {
+    display: none !important;
+  }
+
+  .subnav:hover .subnav-content.show {
+    display: block !important;
+  }
+
+  /* Rotate caret icon when dropdown active */
+  .subnavbtn i.fa-caret-down {
+    float: right;
+    transition: transform 0.3s;
+  }
+
+  .subnavbtn.active i.fa-caret-down {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+  p {
+    font-size: 12px;
+  }
+  ul {
+    font-size: 12px;
+  }
+  .box {
+    font-size: 11px;
+    width: 50%;
+    flex: 1;
+  }
+  .box p {
+    font-size: 11px;
+  }
+  .box ul {
+    font-size: 11px;
+  }
+  img {
+    max-width: 40%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  th {
+    font-size: 11px;
+  }
+  td {
+    font-size: 11px;
+  }
 }

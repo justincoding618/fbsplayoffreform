@@ -23,7 +23,7 @@
 
 .regionals-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 500px);
   gap: 1.5rem;
 }
 
@@ -126,12 +126,12 @@
 }
 
 /* ===== REGIONAL CONNECTOR LINES =====
-   Each .team-row = 30px min-height
-   Each .match-box = 2 rows = ~62px
-   Gap between boxes = 10px
-   Center of top box  = 31px
-   Center of bottom   = 62 + 10 + 31 = 103px
-   Midpoint           = 67px
+    Each .team-row = 30px min-height
+    Each .match-box = 2 rows = ~62px
+    Gap between boxes = 10px
+    Center of top box  = 31px
+    Center of bottom   = 62 + 10 + 31 = 103px
+    Midpoint           = 67px
    ===================================== */
 
 .match-connector {
@@ -181,9 +181,14 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .regionals-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    grid-template-columns: 500px;
+    font-size: 12px;
+  }
+  .seed-badge {
+    font-size: 12px;
   }
   .final-col {
     min-width: unset;

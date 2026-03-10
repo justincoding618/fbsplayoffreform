@@ -88,3 +88,24 @@
   border: 2px solid #d4af37;
   box-shadow: 0 0 14px rgba(212, 175, 55, 0.25);
 }
+
+@media screen and (max-width: 1050px) {
+  .round {
+    width: 250px; /* fixed column width, consistent across all rounds */
+    margin-right: 20px; /* gap between rounds for connector lines */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .round {
+    width: 200px; /* fixed column width, consistent across all rounds */
+    margin-right: 20px; /* gap between rounds for connector lines */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .round {
+    width: 150px; /* fixed column width, consistent across all rounds */
+    margin-right: 20px; /* gap between rounds for connector lines */
+  }
+}
