@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postseason Access in NCAA Sports</title>
+    <link
+      rel="stylesheet"
+      href="https://justincoding618.github.io/fbsplayoffreform/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css"
+    />
+  </head>
+  <body>
+    <article>
+      <div id="navbar-placeholder"></div>
+      <h1>Postseason Access in NCAA Division I Sports</h1>
+      <p>
+        Some collegiate sports have a smaller tournament field because not all
+        Division I universities field that sport. In other words, a small
+        tournament field made sense for a small number of teams having the
+        sport. The selection percentage of all NCAA Division I sponsored
+        collegiate sports to the postseason are as follows (numbers based on
+        <a href="https://www.ncaa.org/sports/2021/5/3/membership-directory.aspx"
+          >the current membership directory of Division I Schools</a
+        >; percentages are all approximate):
+      </p>
+      <table id="postseason-composition">
+        <thead>
+          <tr>
+            <th>Division I Sport</th>
+            <th>Selected</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Postseason Field</th>
+            <th>Games/Sessions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Men's Basketball</td>
+            <td>114</td>
+            <td>365</td>
+            <td>31.2%</td>
+            <td>
+              68-Team NCAA Tournament<br />
+              32-Team National Invitational Tournament<br />
+              8-Team College Basketball Crown<br />
+            </td>
+            <td>
+              105 Total Postseason Games: <br />
+              67 NCAA Tournament Games<br />
+              31 National Invitational Tournament Games <br />
+              7 College Basketball Crown Games
+            </td>
+          </tr>
+          <tr>
+            <td>Women's Basketball</td>
+            <td>148</td>
+            <td>363</td>
+            <td>40.8%</td>
+            <td>
+              68-Team NCAA Tournament<br />
+              32-Team Women's Basketball Invitational Tournament<br />
+              48-Team Women's National Invitational Tournament<br />
+            </td>
+            <td>
+              145 Total Postseason Games: <br />
+              67 NCAA Tournament Games<br />
+              31 National Invitational Tournament Games <br />
+              47 College Basketball Crown Games
+            </td>
+          </tr>
+          <tr>
+            <td>Baseball</td>
+            <td>64</td>
+            <td>308</td>
+            <td>20.8%</td>
+            <td>64-Team NCAA Double Elimination Tournament</td>
+            <td>126-153 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Softball</td>
+            <td>64</td>
+            <td>308</td>
+            <td>20.8%</td>
+            <td>64-Team NCAA Double Elimination Tournament</td>
+            <td>126-153 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Men's Soccer</td>
+            <td>48</td>
+            <td>213</td>
+            <td>22.5%</td>
+            <td>48-Team NCAA Tournament</td>
+            <td>47 NCAA Tournament Matches</td>
+          </tr>
+          <tr>
+            <td>Women's Soccer</td>
+            <td>64</td>
+            <td>350</td>
+            <td>18.3%</td>
+            <td>64-Team NCAA Tournament</td>
+            <td>63 NCAA Tournament Matches</td>
+          </tr>
+          <tr>
+            <td>Men's Lacrosse</td>
+            <td>18</td>
+            <td>77</td>
+            <td>23.4%</td>
+            <td>18-Team NCAA Tournament</td>
+            <td>17 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Women's Lacrosse</td>
+            <td>29</td>
+            <td>134</td>
+            <td>21.6%</td>
+            <td>29-Team NCAA Tournament</td>
+            <td>28 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Men's Volleyball</td>
+            <td>12</td>
+            <td>31</td>
+            <td>23.4%</td>
+            <td>12-Team NCAA Tournament</td>
+            <td>11 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Women's Volleyball</td>
+            <td>64</td>
+            <td>348</td>
+            <td>18.3%</td>
+            <td>64-Team NCAA Tournament</td>
+            <td>63 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Men's Ice Hockey</td>
+            <td>16</td>
+            <td>62</td>
+            <td>25.8%</td>
+            <td>16-Team NCAA Tournament</td>
+            <td>15 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Women's Ice Hockey</td>
+            <td>11</td>
+            <td>40</td>
+            <td>27.5%</td>
+            <td>11-Team NCAA Tournament</td>
+            <td>10 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Men's Tennis</td>
+            <td>64</td>
+            <td>237</td>
+            <td>27.0%</td>
+            <td>64-Team NCAA Tournament</td>
+            <td>63 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Women's Tennis</td>
+            <td>64</td>
+            <td>306</td>
+            <td>20.9%</td>
+            <td>64-Team NCAA Tournament</td>
+            <td>63 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Field Hockey</td>
+            <td>18</td>
+            <td>83</td>
+            <td>21.7%</td>
+            <td>18-Team NCAA Tournament</td>
+            <td>17 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Bowling</td>
+            <td>19</td>
+            <td>39</td>
+            <td>48.7%</td>
+            <td>19-Team NCAA Tournament</td>
+            <td>36-43 Total Postseason Matches</td>
+          </tr>
+          <tr>
+            <td>Men's Water Polo</td>
+            <td>8</td>
+            <td>29</td>
+            <td>27.6%</td>
+            <td>8-Team NCAA Tournament</td>
+            <td>7 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Women's Water Polo</td>
+            <td>9</td>
+            <td>37</td>
+            <td>24.3%</td>
+            <td>9-Team NCAA Tournament</td>
+            <td>8 NCAA Tournament Games</td>
+          </tr>
+          <tr>
+            <td>Men's Golf</td>
+            <td>81</td>
+            <td>312</td>
+            <td>25.6%</td>
+            <td>81-Team NCAA Tournament</td>
+            <td>
+              Performance is based on total team stroke play to determine the
+              final 8 teams <br />
+              7 Playoff Matches
+            </td>
+          </tr>
+          <tr>
+            <td>Women's Golf</td>
+            <td>72</td>
+            <td>286</td>
+            <td>25.2%</td>
+            <td>64-Team NCAA Tournament</td>
+            <td>
+              Performance is based on total team stroke play to determine the
+              final 8 teams <br />
+              7 Playoff Matches
+            </td>
+          </tr>
+          <tr>
+            <td>Men's Gymnastics</td>
+            <td>12</td>
+            <td>12</td>
+            <td>100%</td>
+            <td>12-Team NCAA Tournament</td>
+            <td>5 NCAA Sessions</td>
+          </tr>
+          <tr>
+            <td>Women's Gymnastics</td>
+            <td>36</td>
+            <td>62</td>
+            <td>58.1%</td>
+            <td>36-Team NCAA Tournament</td>
+            <td>5 NCAA Sessions</td>
+          </tr>
+          <tr>
+            <td>Beach Volleyball</td>
+            <td>16</td>
+            <td>68</td>
+            <td>23.5%</td>
+            <td>16-Team NCAA Tournament</td>
+            <td>15 NCAA Tournament Games</td>
+          </tr>
+        </tbody>
+      </table>
+      <img
+        class="float-right"
+        src="https://cdn-icons-png.flaticon.com/512/3363/3363488.png"
+        width="300"
+        height="300"
+      />
+      <p>
+        Wrestling, track and field, cross-country, fencing, rowing, swimming,
+        and diving, skiing, and rifling utilizes team performances from
+        individuals using either a combination of selecting individuals in
+        corresponding brackets and point systems or just a point system from
+        individual performances.
+      </p>
+      <p>
+        Golf holds their postseason differently. In Men’s Golf, the top 81 teams
+        in Men’s Golf qualify for stroke play. Three regionals will have 14
+        teams in each regional, while the other three will have 13 teams in each
+        regional. The top five teams in each regional advance to the regional
+        finals. Out of the 30 teams, the top eight teams with the lowest scores
+        from stroke play will then advance to the match play tournament. In
+        women’s golf, the top 72 teams will qualify for stroke play, pitting 12
+        teams in each of the six regionals. The top six teams in each regional
+        advance to the regional finals. Out of the 30 teams, the top eight teams
+        with the lowest scores from stroke play will advance to the match play
+        tournament. The 8-team match-play tournament will determine the National
+        Champion in both men’s and women’s golf. Note that all postseason
+        tournaments invite all conference champions in Division I sports and
+        Division III football. Division II football will enforce automatic
+        qualifiers beginning the 2025 season. NCAA Division I Football Bowl
+        Subdivision contains 138 teams. The FBS division can definitely
+        integrate a 32-team playoff and have them coexist with bowl games
+        without increasing the invitation to teams to bowl games.
+      </p>
+      <p>
+        All NCAA Division I Olympic sports give out automatic berths to teams
+        winning their conference tournaments (or teams winning the conference
+        regular season championships if sports do not hold conference
+        tournaments), with others sweating out for at-large berths via the
+        selection committee. Nearly every NCAA Division I postseason formats are
+        single elimination, except for the following sports:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Baseball and Softball use a full double-elimination format and
+            best-of-three series. Here is a breakdown how many games an NCAA
+            tournament in baseball and softball would contain:
+          </p>
+          <table>
+            <tr>
+              <th>Round</th>
+              <th>Number of Teams</th>
+              <th>Minimum Total Games</th>
+              <th>Maximum Total Games</th>
+            </tr>
+            <tr>
+              <td>Regionals</td>
+              <td>64</td>
+              <td>96</td>
+              <td>112</td>
+            </tr>
+            <tr>
+              <td>Super Regionals</td>
+              <td>16</td>
+              <td>16</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td>College World Series</td>
+              <td>8</td>
+              <td>12</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>National Championship</td>
+              <td>2</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td colspan="2">Total</td>
+              <td>126</td>
+              <td>153</td>
+            </tr>
+          </table>
+        </li>
+        <p>
+          Each regional has a minimum of six games. With 16 regionals, that
+          would be a minimum of 96 regional games. If both regional finalists
+          have not lost twice after six games, a necessary Game 7 would then
+          happen. The maximum with 16 regionals would then go up to 112 regional
+          games. The Super Regionals is a best-of-three, where the first team to
+          win two games would advance to the College World Series. Since there
+          would be 8 matches of best-of-three, there would a minimum of 16
+          games. If all three super regional matches play three games, there
+          would be a maximum of 24 games. Each half of the college world series
+          has a minimum of six games. By combining two halves together, that
+          would be a minimum of 12 CWS games. If both semifinalists in one match
+          have not lost twice after six games, a necessary Game 7 would then
+          happen. By combining two halves together, that would be a maximum of
+          14 CWS games. The National Championship is the final best-of-three. A
+          third game would be needed if both teams are still tied after two
+          games. The first team to win two games would be crowned the National
+          Champion. In total, the minimum number of postseason games would be
+          126 games, while the maximum would be up to 153 postseason games.
+        </p>
+        <li>
+          <p>
+            Wrestling, Gymnastics, Outdoor and Indoor Track and Field determines
+            a national champion on total point values for each team based on
+            which individual athletes are selected and how they do in the
+            postseason.
+          </p>
+        </li>
+        <li>
+          <p>
+            Bowling use a single-elimination format for the play-in games, a
+            double-elimination format for the regionals and semifinals, and a
+            best-of-seven series for the finals to determine a National
+            Champion. Here is a breakdown how the bowling tournament would work:
+          </p>
+          <table>
+            <tr>
+              <th>Round</th>
+              <th>Number of Teams</th>
+              <th>Minimum Total Games</th>
+              <th>Maximum Total Games</th>
+            </tr>
+            <tr>
+              <td>Regionals</td>
+              <td>19</td>
+              <td>27</td>
+              <td>31</td>
+            </tr>
+            <tr>
+              <td>Semifinals</td>
+              <td>4</td>
+              <td>5</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>National Championship</td>
+              <td>3</td>
+              <td>4</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td colspan="2">Total</td>
+              <td>36</td>
+              <td>43</td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <p>
+            Men's and Women's Golf utilizes a combination of regional
+            stroke-play and a final 8-team playoff. For Men's Golf, here is a
+            breakdown how the golf tournament would work:
+          </p>
+          <table>
+            <tr>
+              <th>Round</th>
+              <th>Number of Teams</th>
+            </tr>
+            <tr>
+              <td>First Round</td>
+              <td>81</td>
+            </tr>
+            <tr>
+              <td>Regionals</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Final Bracket</td>
+              <td>8</td>
+            </tr>
+          </table>
+          <p>
+            Women's Golf, on the other hand, has the breakdown of the following:
+          </p>
+          <table>
+            <tr>
+              <th>Round</th>
+              <th>Number of Teams</th>
+            </tr>
+            <tr>
+              <td>First Round</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <td>Regionals</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Final Bracket</td>
+              <td>8</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <p>
+        No one can always assume that any team with one of the best overall
+        regular season records will win the championship. This is why the
+        postseasons in NCAA Olympic sports are formidable. All postseason
+        tournaments can be anyone’s game and any qualified team, regardless of
+        overall record, can win it all. Even the top qualified overall teams
+        will be on the wrong end of upsets and end their postseason run
+        unexpectedly (such as a 16-seed defeating a 1-seed or an undefeated team
+        losing in any tournament).
+      </p>
+      <p>
+        Why is entrenching against changes to the postseason the problem in
+        college football? The feeling of entrenchment against major changes to
+        the postseason is damaging the college football postseason landscape and
+        not necessarily solving the problem to determine the national champion,
+        even if the FBS earns high revenue from those staying entrenched to the
+        idea that overstayed their welcome. For examples:
+      </p>
+      <ul>
+        <li>
+          The so-called committee’s skullduggery “eye-test” to rank teams in a
+          CFP top 25 and using that to say that those are the best teams to
+          contend for a national champion.
+        </li>
+        <li>
+          Utilizing bowl games to continue to attempt producing marquee matchups
+          of teams not making the 4-team College Football Playoff or a 12-team
+          playoff beginning in 2024.
+        </li>
+        <li>
+          The media emphatically overvaluing a conference to a handicap that
+          losing against each other is not necessarily a bad loss, and
+          neglecting their easy schedules, especially after releasing a
+          preseason poll.
+        </li>
+        <li>
+          Perhaps, preseason polls provide the assumption and bias problems too
+          and that it would give teams an unnecessary handicap based on the
+          previous season results.
+        </li>
+      </ul>
+    </article>
+    <footer>
+      Credit for Icons goes to Artists from
+      <a href="https://www.flaticon.com" title="Flaticon">Icons by Flaticon</a>
+      and <a href="https://www.freepik.com/" title="FreePik">FreePik</a>
+    </footer>
+    <script src="https://justincoding618.github.io/fbsplayoffreform/script/app.js"></script>
+    <script src="https://justincoding618.github.io/fbsplayoffreform/script/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/2.3.7/js/dataTables.min.js"></script>
+    <script src="https://justincoding618.github.io/fbsplayoffreform/script/sortingtable.js"></script>
+  </body>
+</html>
