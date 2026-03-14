@@ -5,3 +5,4 @@ const sorttable = function (tableID) {
 
 sorttable("playoff-appearances");
 sorttable("playoff-drought");
+sorttable("postseason-composition");
