@@ -227,7 +227,7 @@ footer {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -275,6 +275,66 @@ footer {
   position: relative;
   flex-direction: row;
   flex-wrap: wrap-reverse;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-33 {
+  width: 33%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-90 {
+  width: 90%;
 }
 
 a {
@@ -573,7 +633,7 @@ a:on-click {
   }
   .box {
     font-size: 11px;
-    width: 50%;
+    width: 100%;
     flex: 1;
   }
   .box p {
