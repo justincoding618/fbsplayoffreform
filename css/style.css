@@ -337,6 +337,10 @@ footer {
   width: 90%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 a {
   color: #009cde;
   text-decoration: none;
