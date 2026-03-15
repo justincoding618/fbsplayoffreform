@@ -464,6 +464,11 @@ a:on-click {
   color: white;
 }
 
+.table-scroll {
+  display: block;
+  overflow-x: auto;
+  white-space: no-wrap;
+}
 /* DESKTOP HOVER - Show dropdown */
 @media screen and (min-width: 769px) {
   .subnav:hover .subnav-content {
