@@ -57,6 +57,16 @@ loadTable(
   "homefield",
 );
 
+const loadIcon = function (iconFile) {
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.href = iconFile;
+  link.type = "image/x-icon";
+  document.head.appendChild(link);
+};
+
+loadIcon("https://cdn-icons-png.freepik.com/512/8108/8108291.png");
+
 // Initialize navbar functionality after it's loaded
 function initializeNavbar() {
   console.log("Initializing navbar...");
