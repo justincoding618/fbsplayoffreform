@@ -66,7 +66,7 @@ const loadIcon = function (iconFile) {
 };
 
 loadIcon(
-  "https://justincoding618.github.io/fbsplayoffreform/images/american-college-football.png",
+  "https://images.icon-icons.com/1465/PNG/512/669americanfootball_100217.png",
 );
 
 // Initialize navbar functionality after it's loaded
