@@ -65,7 +65,9 @@ const loadIcon = function (iconFile) {
   document.head.appendChild(link);
 };
 
-loadIcon("https://cdn-icons-png.freepik.com/512/8108/8108291.png");
+loadIcon(
+  "https://justincoding618.github.io/fbsplayoffreform/images/american-college-football.png",
+);
 
 // Initialize navbar functionality after it's loaded
 function initializeNavbar() {
