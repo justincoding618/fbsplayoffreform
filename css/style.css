@@ -517,6 +517,9 @@ a:on-click {
   td {
     font-size: 12px;
   }
+  .warning-box {
+    font-size: 12px;
+  }
   /* Navbar adjustments - USE FLEXBOX */
   .navbar {
     position: relative;
