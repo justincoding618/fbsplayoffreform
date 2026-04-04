@@ -6,3 +6,6 @@ const sorttable = function (tableID) {
 sorttable("playoff-appearances");
 sorttable("playoff-drought");
 sorttable("postseason-composition");
+sorttable("division-i-fcs");
+sorttable("division-ii");
+sorttable("division-iii");
