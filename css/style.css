@@ -370,6 +370,9 @@ a:on-click {
   overflow: visible; /* Changed from hidden */
   background-color: #000;
   position: sticky;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==================== DESKTOP STYLES (Default) ==================== */
@@ -389,14 +392,14 @@ a:on-click {
 
 /* Desktop Navigation Links - VISIBLE and HORIZONTAL */
 .navbar-links {
-  display: flex;
+  display: inline-block;
   flex-direction: row;
   align-items: center;
   width: auto;
 }
 
 .navbar a {
-  display: block;
+  display: inline-block;
   color: white;
   text-align: center;
   padding: 14px 16px;
