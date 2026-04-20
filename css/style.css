@@ -500,7 +500,7 @@ a:on-click {
   }
   .box {
     font-size: 12px;
-    width: 50%;
+    width: 100%;
     flex: 1;
   }
   .box p {
