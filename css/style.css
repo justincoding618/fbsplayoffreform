@@ -526,7 +526,7 @@ a:on-click {
   .container {
     max-width: 100%;
     display: block;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin: 0 auto;
     padding: 0 2rem;
