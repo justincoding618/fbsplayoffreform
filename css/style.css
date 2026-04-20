@@ -523,6 +523,14 @@ a:on-click {
   .warning-box {
     font-size: 12px;
   }
+  .container {
+    max-width: 100%;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
   /* Navbar adjustments - USE FLEXBOX */
   .navbar {
     position: relative;
