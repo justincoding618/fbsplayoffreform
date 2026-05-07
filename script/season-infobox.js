@@ -141,6 +141,11 @@ const seasons = [
     navTitle: "Division I FBS Playoffs",
     path: `${base}/season-archives/12-team-cfp-era/2025-26.html`,
   },
+  {
+    year: "2026-27",
+    navTitle: "Division I FBS Playoffs",
+    path: `${base}/season-archives/12-team-cfp-era/2026-27.html`,
+  },
 ];
 
 const buildSeasonNavInfobox = function () {
