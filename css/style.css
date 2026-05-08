@@ -689,4 +689,8 @@ a:on-click {
   td {
     font-size: 11px;
   }
+  .season-navigation {
+    width: 100%;
+    margin: auto;
+  }
 }
