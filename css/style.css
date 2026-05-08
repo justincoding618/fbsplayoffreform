@@ -353,6 +353,14 @@ a:hover {
 a:on-click {
   color: #16213e;
 }
+
+.season-navigation {
+  width: 50%;
+  margin: auto;
+  place-items: center;
+  justify-content: center;
+}
+
 /* ==================== NAVBAR STYLES ==================== */
 
 /* Base Container */
