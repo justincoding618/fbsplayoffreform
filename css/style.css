@@ -355,10 +355,15 @@ a:on-click {
 }
 
 .season-navigation {
-  width: 50%;
+  width: 30%;
   margin: auto;
-  place-items: center;
-  justify-content: center;
+}
+
+.season-navigation th {
+  text-align: center;
+}
+.season-navigation tr {
+  text-align: center;
 }
 
 /* ==================== NAVBAR STYLES ==================== */
