@@ -485,6 +485,10 @@ a:on-click {
   overflow-x: auto;
   white-space: no-wrap;
 }
+
+blockquote {
+  padding: 1em 0;
+}
 /* DESKTOP HOVER - Show dropdown */
 @media screen and (min-width: 769px) {
   .subnav:hover .subnav-content {
