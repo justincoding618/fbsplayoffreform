@@ -1,0 +1,12 @@
+const sorttable = function (tableID) {
+  getTableID = document.getElementById(tableID);
+  new DataTable(getTableID);
+};
+
+sorttable("playoff-appearances");
+sorttable("former-fbs-teams");
+sorttable("playoff-drought");
+sorttable("postseason-composition");
+sorttable("division-i-fcs");
+sorttable("division-ii");
+sorttable("division-iii");

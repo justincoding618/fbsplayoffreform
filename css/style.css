@@ -1,0 +1,784 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", "Roboto", Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background-color: #f5f5f5;
+  font-weight: 600;
+  padding: 2rem;
+  padding-top: 80px;
+}
+
+article {
+  margin: 0;
+  padding: 5px;
+  overflow: auto;
+}
+
+header {
+  font-family: "Exo 2";
+  font-size: 8rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+main {
+  background: white;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 3rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+h2 {
+  color: #1a1a2e;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+ul {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  display: list-item;
+  margin-bottom: 0.5rem;
+}
+
+ol li {
+  list-style-type: decimal;
+  display: list-item;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: "1";
+}
+
+th {
+  background: #009cde;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.danger {
+  background-color: #ff0000;
+  color: white;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.mild-danger {
+  background-color: #ff6666;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.correct {
+  background-color: #00ff00;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 700;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.section-card {
+  background-color: #f8f9fa;
+  border-left: 5px solid #0088ce;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.section-card h3 {
+  margin-top: 0;
+  color: #0088ce;
+}
+.section-card a {
+  font-weight: bold;
+  color: #0088ce;
+  text-decoration: none;
+}
+.section-card a:hover {
+  text-decoration: underline;
+}
+.intro-box {
+  background-color: #e7f3ff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5em;
+}
+
+.warning-box {
+  background-color: #e9d502;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container p {
+  font-size: 1rem;
+}
+
+.image-container {
+  padding: 0 2rem;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+.float-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.box {
+  margin: 10px 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #d3d1d1;
+  box-shadow: 0px 0px 3px 2px #ffffff;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-33 {
+  width: 33%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+a {
+  color: #009cde;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:on-click {
+  color: #16213e;
+}
+
+.season-navigation {
+  width: 26%;
+  margin: auto;
+  text-align: center;
+}
+
+.season-navigation th {
+  text-align: center;
+}
+.season-navigation tr::after {
+  display: block;
+  content: "\A";
+  white-space: pre;
+}
+
+.playoff-appearances {
+  width: 26%;
+  /* margin: auto;
+  text-align: center; */
+}
+
+#playoff-drought .currently-active {
+  background-color: yellow;
+  font-weight: 600;
+}
+.currently-inactive {
+  font-style: italic;
+}
+
+/* ==================== NAVBAR STYLES ==================== */
+
+/* Base Container */
+.mobile-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  overflow: visible; /* Changed from hidden */
+  background-color: #000;
+  position: sticky;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== DESKTOP STYLES (Default) ==================== */
+
+/* Hamburger Icon - HIDDEN on desktop */
+.navbar .icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 14px 16px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  z-index: 10;
+}
+
+/* Desktop Navigation Links - VISIBLE and HORIZONTAL */
+.navbar-links {
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+}
+
+.navbar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #009cde;
+  color: #fff;
+}
+
+/* Subnav (Dropdown) */
+.subnav {
+  position: relative;
+  display: inline-block;
+}
+
+.subnav .subnavbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.subnav .subnavbtn:hover {
+  background-color: #009cde;
+  color: #fff;
+}
+
+/* Dropdown Content - DESKTOP */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #009cde;
+  min-width: 250px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.subnav-content a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.subnav-content a:hover {
+  background-color: #009cde;
+  color: #fff;
+}
+
+.active {
+  background-color: #009cde;
+  color: white;
+}
+
+.horizontal-scroll {
+  display: block;
+  overflow-x: auto;
+  white-space: no-wrap;
+}
+
+blockquote {
+  padding: 1em 0;
+}
+
+/* DESKTOP HOVER - Show dropdown */
+@media screen and (min-width: 769px) {
+  .subnav:hover .subnav-content {
+    display: block !important;
+    background-color: #000;
+  }
+}
+
+/* ==================== MOBILE STYLES ==================== */
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  ul {
+    font-size: 14px;
+  }
+  .box {
+    font-size: 12px;
+    width: 100%;
+    flex: 1;
+  }
+  .box p {
+    font-size: 12px;
+  }
+  .box ul {
+    font-size: 12px;
+  }
+  img {
+    max-width: 60%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  th {
+    font-size: 12px;
+  }
+  td {
+    font-size: 12px;
+  }
+  .warning-box {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 100%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  /* Navbar adjustments - USE FLEXBOX */
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-end; /* Push hamburger to the right */
+    align-items: flex-start;
+  }
+  .w-25 {
+    width: 100%;
+  }
+
+  .w-30 {
+    width: 100%;
+  }
+
+  .w-33 {
+    width: 100%;
+  }
+
+  .w-35 {
+    width: 100%;
+  }
+
+  .w-40 {
+    width: 100%;
+  }
+
+  .w-45 {
+    width: 100%;
+  }
+
+  .w-50 {
+    width: 100%;
+  }
+
+  .w-55 {
+    width: 100%;
+  }
+
+  .w-60 {
+    width: 100%;
+  }
+
+  .w-65 {
+    width: 100%;
+  }
+
+  .w-70 {
+    width: 100%;
+  }
+
+  .w-75 {
+    width: 100%;
+  }
+
+  .w-80 {
+    width: 100%;
+  }
+
+  .w-85 {
+    width: 100%;
+  }
+
+  .w-90 {
+    width: 100%;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  /* Show hamburger icon - NO ABSOLUTE POSITIONING */
+  .navbar .icon {
+    display: block !important;
+    position: relative !important; /* Changed from absolute */
+    padding: 10px 15px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    z-index: 1001;
+    background-color: transparent;
+    border: 2px solid transparent;
+    order: 2; /* Force it to be last in flex order */
+    margin-left: auto; /* Push to the right */
+  }
+
+  .navbar .icon:hover,
+  .navbar .icon:active {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  /* Hide navigation links by default on mobile */
+  .navbar-links {
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 50px; /* Below the navbar */
+    left: 0;
+    order: 1;
+  }
+
+  /* Show navigation when active */
+  .navbar-links.responsive {
+    display: flex !important;
+  }
+
+  /* Stack all items vertically */
+  .navbar a,
+  .subnav {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #000;
+  }
+
+  .navbar a {
+    padding: 14px 16px;
+  }
+
+  .subnav .subnavbtn {
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+  }
+
+  /* Mobile dropdown - EXPLICITLY PREVENT HOVER */
+  .subnav-content {
+    position: relative;
+    display: none !important;
+    width: 100%;
+    min-width: auto;
+    box-shadow: none;
+    background-color: #000;
+  }
+
+  .subnav-content.show {
+    display: block !important;
+  }
+
+  /* CRITICAL: Prevent hover from triggering on mobile */
+  .subnav:hover .subnav-content {
+    display: none !important;
+  }
+
+  .subnav:hover .subnav-content.show {
+    display: block !important;
+  }
+
+  /* Rotate caret icon when dropdown active */
+  .subnavbtn i.fa-caret-down {
+    float: right;
+    transition: transform 0.3s;
+  }
+
+  .subnavbtn.active i.fa-caret-down {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+  p {
+    font-size: 12px;
+  }
+  ul {
+    font-size: 12px;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .box {
+    width: 100%;
+  }
+  .box {
+    font-size: 11px;
+    width: 100%;
+    flex: 1;
+  }
+  .box p {
+    font-size: 11px;
+  }
+  .box ul {
+    font-size: 11px;
+  }
+  img {
+    max-width: 50%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  th {
+    font-size: 11px;
+  }
+  td {
+    font-size: 11px;
+  }
+  .season-navigation {
+    width: 100%;
+    margin: auto;
+  }
+}
