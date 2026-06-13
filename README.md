@@ -1,6 +1,6 @@
 # College Football Playoff Reform
 
-An interactive web application exploring alternative playoff formats for Division I FBS football.
+An interactive web application exploring alternative playoff formats for Division I FBS football. This was previously pushed on Feburary 9, 2026. This repo is a redo of the then-deleted repository of the same name.
 
 ## Features
 
