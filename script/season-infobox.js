@@ -94,7 +94,7 @@ const seasons = [
   {
     year: "1996-97",
     navTitle: "Division I-A Playoffs",
-    path: `${base}//season-archives/1990s/1996-97.html`,
+    path: `${base}/season-archives/1990s/1996-97.html`,
   },
   {
     year: "1997-98",
