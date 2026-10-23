@@ -75,80 +75,76 @@ loadHeadFeature(
   "x/image",
 );
 
-const toggleMenu = function () {
-  console.log("toggleMenu called");
-  const navbarLinks = document.getElementById("navbarLinks");
-  if (!navbarLinks) {
-    console.error("navbarLinks not found!");
-    return;
-  }
+// Initialize navbar functionality after it's loaded
+function initializeNavbar() {
+  console.log("Initializing navbar...");
 
-  if (navbarLinks.classList.contains("responsive")) {
-    navbarLinks.classList.remove("responsive");
-    // Close all dropdowns when closing menu
-    const dropdowns = document.querySelectorAll(".subnav-content");
-    dropdowns.forEach(function (dropdown) {
-      dropdown.classList.remove("show");
-    });
-    const buttons = document.querySelectorAll(".subnavbtn");
-    buttons.forEach(function (btn) {
-      btn.classList.remove("active");
-    });
-  } else {
-    navbarLinks.classList.add("responsive");
-  }
-};
-
-const toggleDropdown = function (button) {
-  // Only toggle on mobile
-  if (window.innerWidth <= 768) {
-    const subnav = button.parentElement;
-    const subnavContent = subnav.querySelector(".subnav-content");
-
-    if (!subnavContent) {
-      console.error("subnavContent not found!");
-      return;
-    }
-
-    const isShown = subnavContent.classList.contains("show");
-
-    if (isShown) {
-      subnavContent.classList.remove("show");
-      button.classList.remove("active");
-    } else {
-      subnavContent.classList.add("show");
-      button.classList.add("active");
-    }
-
-    console.log("Classes after toggle:", subnavContent.classList.toString());
-
-    // Check again after a short delay to see if something changed it
-    setTimeout(function () {
-      console.log("Classes 100ms later:", subnavContent.classList.toString());
-    }, 100);
-  }
-};
-
-const toggleNavButton = function (button) {
-  button.addEventListener("click", function (e) {
-    e.preventDefault();
-    console.log("Dropdown button clicked");
-    toggleDropdown(button);
-  });
-};
-
-const initializeNavbar = function () {
   const hamburger = document.querySelector(".navbar .icon");
   const navbarLinks = document.getElementById("navbarLinks");
   const subnavButtons = document.querySelectorAll(".subnavbtn");
   const navbar = document.querySelector(".navbar");
-  const navbutton = document.querySelector("button");
 
   // DEFINE toggleMenu function HERE
-  toggleMenu();
+  function toggleMenu() {
+    console.log("toggleMenu called");
+    const navbarLinks = document.getElementById("navbarLinks");
+    if (!navbarLinks) {
+      console.error("navbarLinks not found!");
+      return;
+    }
+
+    if (navbarLinks.classList.contains("responsive")) {
+      navbarLinks.classList.remove("responsive");
+      // Close all dropdowns when closing menu
+      const dropdowns = document.querySelectorAll(".subnav-content");
+      dropdowns.forEach(function (dropdown) {
+        dropdown.classList.remove("show");
+      });
+      const buttons = document.querySelectorAll(".subnavbtn");
+      buttons.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+    } else {
+      navbarLinks.classList.add("responsive");
+    }
+  }
 
   // DEFINE toggleDropdown function HERE with detailed logging
-  toggleDropdown(navbutton);
+  function toggleDropdown(button) {
+    console.log("toggleDropdown called");
+
+    // Only toggle on mobile
+    if (window.innerWidth <= 768) {
+      const subnav = button.parentElement;
+      const subnavContent = subnav.querySelector(".subnav-content");
+
+      if (!subnavContent) {
+        console.error("subnavContent not found!");
+        return;
+      }
+
+      const isShown = subnavContent.classList.contains("show");
+      console.log("Current state - isShown:", isShown);
+      console.log("Classes before toggle:", subnavContent.classList.toString());
+
+      if (isShown) {
+        console.log("Removing 'show' class");
+        subnavContent.classList.remove("show");
+        button.classList.remove("active");
+      } else {
+        console.log("Adding 'show' class");
+        subnavContent.classList.add("show");
+        button.classList.add("active");
+      }
+
+      console.log("Classes after toggle:", subnavContent.classList.toString());
+
+      // Check again after a short delay to see if something changed it
+      setTimeout(function () {
+        console.log("Classes 100ms later:", subnavContent.classList.toString());
+      }, 100);
+    }
+  }
 
   // Hamburger menu toggle
   if (hamburger) {
@@ -160,7 +156,13 @@ const initializeNavbar = function () {
   }
 
   // Dropdown toggle for each subnav button
-  subnavButtons.forEach(toggleNavButton(navbutton));
+  subnavButtons.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Dropdown button clicked");
+      toggleDropdown(button);
+    });
+  });
 
   // ONLY listen for clicks OUTSIDE on desktop
   if (window.innerWidth > 768) {
@@ -188,4 +190,4 @@ const initializeNavbar = function () {
       });
     }
   });
-};
+}
