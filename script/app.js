@@ -75,6 +75,30 @@ loadHeadFeature(
   "x/image",
 );
 
+const toggleMenu = function () {
+  console.log("toggleMenu called");
+  const navbarLinks = document.getElementById("navbarLinks");
+  if (!navbarLinks) {
+    console.error("navbarLinks not found!");
+    return;
+  }
+
+  if (navbarLinks.classList.contains("responsive")) {
+    navbarLinks.classList.remove("responsive");
+    // Close all dropdowns when closing menu
+    const dropdowns = document.querySelectorAll(".subnav-content");
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove("show");
+    });
+    const buttons = document.querySelectorAll(".subnavbtn");
+    buttons.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+  } else {
+    navbarLinks.classList.add("responsive");
+  }
+};
+
 // Initialize navbar functionality after it's loaded
 function initializeNavbar() {
   console.log("Initializing navbar...");
@@ -84,30 +108,7 @@ function initializeNavbar() {
   const subnavButtons = document.querySelectorAll(".subnavbtn");
   const navbar = document.querySelector(".navbar");
 
-  // DEFINE toggleMenu function HERE
-  function toggleMenu() {
-    console.log("toggleMenu called");
-    const navbarLinks = document.getElementById("navbarLinks");
-    if (!navbarLinks) {
-      console.error("navbarLinks not found!");
-      return;
-    }
-
-    if (navbarLinks.classList.contains("responsive")) {
-      navbarLinks.classList.remove("responsive");
-      // Close all dropdowns when closing menu
-      const dropdowns = document.querySelectorAll(".subnav-content");
-      dropdowns.forEach(function (dropdown) {
-        dropdown.classList.remove("show");
-      });
-      const buttons = document.querySelectorAll(".subnavbtn");
-      buttons.forEach(function (btn) {
-        btn.classList.remove("active");
-      });
-    } else {
-      navbarLinks.classList.add("responsive");
-    }
-  }
+  toggleMenu();
 
   // DEFINE toggleDropdown function HERE with detailed logging
   function toggleDropdown(button) {
