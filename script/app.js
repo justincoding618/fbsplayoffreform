@@ -108,8 +108,6 @@ function initializeNavbar() {
   const subnavButtons = document.querySelectorAll(".subnavbtn");
   const navbar = document.querySelector(".navbar");
 
-  toggleMenu();
-
   // DEFINE toggleDropdown function HERE with detailed logging
   function toggleDropdown(button) {
     console.log("toggleDropdown called");
