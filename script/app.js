@@ -143,6 +143,7 @@ function initializeNavbar() {
   const navbarLinks = document.getElementById("navbarLinks");
   const subnavButtons = document.querySelectorAll(".subnavbtn");
   const navbar = document.querySelector(".navbar");
+  const dropdowns = document.querySelectorAll(".subnav-content");
 
   // DEFINE toggleDropdown function HERE with detailed logging
   function toggleDropdown(button) {
@@ -203,7 +204,6 @@ function initializeNavbar() {
   if (window.innerWidth > 768) {
     document.addEventListener("click", function (event) {
       if (navbar && !navbar.contains(event.target)) {
-        const dropdowns = document.querySelectorAll(".subnav-content");
         dropdowns.forEach(function (dropdown) {
           dropdown.classList.remove("show");
         });
@@ -215,12 +215,10 @@ function initializeNavbar() {
   window.addEventListener("resize", function () {
     if (window.innerWidth > 768 && navbarLinks) {
       navbarLinks.classList.remove("responsive");
-      const dropdowns = document.querySelectorAll(".subnav-content");
       dropdowns.forEach(function (dropdown) {
         dropdown.classList.remove("show");
       });
-      const buttons = document.querySelectorAll(".subnavbtn");
-      buttons.forEach(function (btn) {
+      subnavButtons.forEach(function (btn) {
         btn.classList.remove("active");
       });
     }
