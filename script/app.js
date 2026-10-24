@@ -159,7 +159,7 @@ function initializeNavbar() {
     button.addEventListener("click", function (e) {
       e.preventDefault();
       console.log("Dropdown button clicked");
-      toggleDropdown(button);
+      toggleDropDown(button);
     });
   });
 
