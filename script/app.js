@@ -1,6 +1,4 @@
-//This will provide the main URL base path; app.js must be implemented first via script html tags before implementing other js files through script html tags
-const base = "/fbsplayoffreform";
-
+// Define all the functions first
 const toggleMenu = function () {
   console.log("toggleMenu called");
   const navbarLinks = document.getElementById("navbarLinks");
@@ -162,6 +160,9 @@ const loadHeadFeature = function (rel, File, type = "") {
   link.type = type;
   document.head.appendChild(link);
 };
+
+//This will provide the main URL base path; app.js must be implemented first via script html tags before implementing other js files through script html tags
+const base = "/fbsplayoffreform";
 
 loadNavigationBar(`${base}/reusable/nav.html`, "navbar-placeholder");
 loadNavigationBar(`${base}/reusable/season-nav.html`, "season-nav");
