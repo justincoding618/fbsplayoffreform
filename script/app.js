@@ -1,80 +1,6 @@
 //This will provide the main URL base path; app.js must be implemented first via script html tags before implementing other js files through script html tags
 const base = "/fbsplayoffreform";
 
-// Loads Navigation Bar into each Web Page
-const loadNavigationBar = function (htmlFile, elementName) {
-  fetch(htmlFile)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load nav: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((HTML) => {
-      const Element = document.getElementById(elementName);
-      if (Element) {
-        document.getElementById(elementName).innerHTML = HTML;
-        // Initialize navbar functionality AFTER it's loaded
-        initializeNavbar();
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading navigation:", error);
-    });
-};
-
-loadNavigationBar(`${base}/reusable/nav.html`, "navbar-placeholder");
-loadNavigationBar(`${base}/reusable/season-nav.html`, "season-nav");
-
-const loadTable = function (htmlFile, elementName) {
-  fetch(htmlFile)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load nav: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((HTML) => {
-      const Element = document.getElementById(elementName);
-      if (Element) {
-        Element.innerHTML = HTML;
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading table:", error);
-    });
-};
-
-loadTable(`${base}/reusable/newyearsixtable.html`, "ny6table");
-loadTable(`${base}/reusable/homefield.html`, "homefield");
-
-const loadHeadFeature = function (rel, File, type = "") {
-  const link = document.createElement("link");
-  link.rel = rel;
-  link.href = File;
-  link.type = type;
-  document.head.appendChild(link);
-};
-
-loadHeadFeature("preconnect", "https://fonts.googleapis.com");
-loadHeadFeature("preconnect", "https://fonts.gstatic.com");
-loadHeadFeature(
-  "stylesheet",
-  "https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap",
-);
-loadHeadFeature("stylesheet", `${base}/css/style.css`);
-loadHeadFeature(
-  "stylesheet",
-  "//cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css",
-);
-loadHeadFeature("stylesheet", `${base}/css/season-infobox.css`);
-loadHeadFeature("stylesheet", `${base}/css/bracket.css`);
-loadHeadFeature(
-  "icon",
-  "https://images.icon-icons.com/1465/PNG/512/669americanfootball_100217.png",
-  "x/image",
-);
-
 const toggleMenu = function () {
   console.log("toggleMenu called");
   const navbarLinks = document.getElementById("navbarLinks");
@@ -136,7 +62,7 @@ const toggleDropDown = function (button) {
 };
 
 // Initialize navbar functionality after it's loaded
-function initializeNavbar() {
+const initializeNavbar = function () {
   console.log("Initializing navbar...");
 
   const hamburger = document.querySelector(".navbar .icon");
@@ -186,4 +112,78 @@ function initializeNavbar() {
       });
     }
   });
-}
+};
+
+// Loads Navigation Bar into each Web Page
+const loadNavigationBar = function (htmlFile, elementName) {
+  fetch(htmlFile)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((HTML) => {
+      const Element = document.getElementById(elementName);
+      if (Element) {
+        document.getElementById(elementName).innerHTML = HTML;
+        // Initialize navbar functionality AFTER it's loaded
+        initializeNavbar();
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading navigation:", error);
+    });
+};
+
+const loadTable = function (htmlFile, elementName) {
+  fetch(htmlFile)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((HTML) => {
+      const Element = document.getElementById(elementName);
+      if (Element) {
+        Element.innerHTML = HTML;
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading table:", error);
+    });
+};
+
+const loadHeadFeature = function (rel, File, type = "") {
+  const link = document.createElement("link");
+  link.rel = rel;
+  link.href = File;
+  link.type = type;
+  document.head.appendChild(link);
+};
+
+loadNavigationBar(`${base}/reusable/nav.html`, "navbar-placeholder");
+loadNavigationBar(`${base}/reusable/season-nav.html`, "season-nav");
+
+loadTable(`${base}/reusable/newyearsixtable.html`, "ny6table");
+loadTable(`${base}/reusable/homefield.html`, "homefield");
+
+loadHeadFeature("preconnect", "https://fonts.googleapis.com");
+loadHeadFeature("preconnect", "https://fonts.gstatic.com");
+loadHeadFeature(
+  "stylesheet",
+  "https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap",
+);
+loadHeadFeature("stylesheet", `${base}/css/style.css`);
+loadHeadFeature(
+  "stylesheet",
+  "//cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css",
+);
+loadHeadFeature("stylesheet", `${base}/css/season-infobox.css`);
+loadHeadFeature("stylesheet", `${base}/css/bracket.css`);
+loadHeadFeature(
+  "icon",
+  "https://images.icon-icons.com/1465/PNG/512/669americanfootball_100217.png",
+  "x/image",
+);
