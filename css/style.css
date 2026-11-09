@@ -121,6 +121,14 @@ tr:hover {
   border-radius: 4px;
 }
 
+.caution {
+  background-color: #ffbf00;
+  color: black;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
 .correct {
   background-color: #00ff00;
   padding: 1.5rem;
