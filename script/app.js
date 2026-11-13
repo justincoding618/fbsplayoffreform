@@ -169,6 +169,10 @@ loadNavigationBar(`${base}/reusable/season-nav.html`, "season-nav");
 
 loadTable(`${base}/reusable/newyearsixtable.html`, "ny6table");
 loadTable(`${base}/reusable/homefield.html`, "homefield");
+loadTable(
+  `${base}/reusable/homefieldquarterfinal.html`,
+  "homefieldquarterfinal",
+);
 
 loadHeadFeature("preconnect", "https://fonts.googleapis.com");
 loadHeadFeature("preconnect", "https://fonts.gstatic.com");
