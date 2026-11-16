@@ -1,139 +1,4 @@
 // Define all the functions first
-const toggleMenu = function () {
-  console.log("toggleMenu called");
-  const navbarLinks = document.getElementById("navbarLinks");
-  if (!navbarLinks) {
-    console.error("navbarLinks not found!");
-    return;
-  }
-
-  if (navbarLinks.classList.contains("responsive")) {
-    navbarLinks.classList.remove("responsive");
-    // Close all dropdowns when closing menu
-    const dropdowns = document.querySelectorAll(".subnav-content");
-    dropdowns.forEach(function (dropdown) {
-      dropdown.classList.remove("show");
-    });
-    const buttons = document.querySelectorAll(".subnavbtn");
-    buttons.forEach(function (btn) {
-      btn.classList.remove("active");
-    });
-  } else {
-    navbarLinks.classList.add("responsive");
-  }
-};
-
-const toggleDropDown = function (button) {
-  console.log("toggleDropdown called");
-
-  // Only toggle on mobile
-  if (window.innerWidth <= 768) {
-    const subnav = button.parentElement;
-    const subnavContent = subnav.querySelector(".subnav-content");
-
-    if (!subnavContent) {
-      console.error("subnavContent not found!");
-      return;
-    }
-
-    const isShown = subnavContent.classList.contains("show");
-    console.log("Current state - isShown:", isShown);
-    console.log("Classes before toggle:", subnavContent.classList.toString());
-
-    if (isShown) {
-      console.log("Removing 'show' class");
-      subnavContent.classList.remove("show");
-      button.classList.remove("active");
-    } else {
-      console.log("Adding 'show' class");
-      subnavContent.classList.add("show");
-      button.classList.add("active");
-    }
-
-    console.log("Classes after toggle:", subnavContent.classList.toString());
-
-    // Check again after a short delay to see if something changed it
-    setTimeout(function () {
-      console.log("Classes 100ms later:", subnavContent.classList.toString());
-    }, 100);
-  }
-};
-
-// Initialize navbar functionality after it's loaded
-const initializeNavbar = function () {
-  console.log("Initializing navbar...");
-
-  const hamburger = document.querySelector(".navbar .icon");
-  const navbarLinks = document.getElementById("navbarLinks");
-  const subnavButtons = document.querySelectorAll(".subnavbtn");
-  const navbar = document.querySelector(".navbar");
-  const dropdowns = document.querySelectorAll(".subnav-content");
-
-  // Hamburger menu toggle
-  if (hamburger) {
-    hamburger.addEventListener("click", function (e) {
-      e.preventDefault();
-      console.log("Hamburger clicked");
-      toggleMenu();
-    });
-  }
-
-  // Dropdown toggle for each subnav button
-  subnavButtons.forEach(function (button) {
-    button.addEventListener("click", function (e) {
-      e.preventDefault();
-      console.log("Dropdown button clicked");
-      toggleDropDown(button);
-    });
-  });
-
-  // ONLY listen for clicks OUTSIDE on desktop
-  if (window.innerWidth > 768) {
-    document.addEventListener("click", function (event) {
-      if (navbar && !navbar.contains(event.target)) {
-        dropdowns.forEach(function (dropdown) {
-          dropdown.classList.remove("show");
-        });
-      }
-    });
-  }
-
-  // Handle window resize
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 768 && navbarLinks) {
-      navbarLinks.classList.remove("responsive");
-      dropdowns.forEach(function (dropdown) {
-        dropdown.classList.remove("show");
-      });
-      subnavButtons.forEach(function (button) {
-        button.classList.remove("active");
-      });
-    }
-  });
-};
-
-// Loads Navigation Bar into each Web Page
-const loadNavigationBar = function (htmlFile, elementName) {
-  fetch(htmlFile)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load nav: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((HTML) => {
-      const Element = document.getElementById(elementName);
-      if (Element) {
-        document.getElementById(elementName).innerHTML = HTML;
-        // Initialize navbar functionality AFTER it's loaded
-        initializeNavbar();
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading navigation:", error);
-    });
-};
-
 const loadTable = function (htmlFile, elementName) {
   fetch(htmlFile)
     .then((response) => {
@@ -161,18 +26,53 @@ const loadHeadFeature = function (rel, File, type = "") {
   document.head.appendChild(link);
 };
 
-//This will provide the main URL base path; app.js must be implemented first via script html tags before implementing other js files through script html tags
+const showSideBar = function () {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "flex";
+};
+const hideSideBar = function () {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "none";
+};
+
+function toggleSubMenu(button) {
+  if (!button.nextElementSibling.classList.contains("show")) {
+    closeAllSubMenus();
+  }
+
+  button.nextElementSibling.classList.toggle("show");
+  button.classList.toggle("rotate");
+
+  if (sidebar.classList.contains("close")) {
+    sidebar.classList.toggle("close");
+    toggleButton.classList.toggle("rotate");
+  }
+}
+
+function closeAllSubMenus() {
+  Array.from(sidebar.getElementsByClassName("show")).forEach((ul) => {
+    ul.classList.remove("show");
+    ul.previousElementSibling.classList.remove("rotate");
+  });
+}
+
 const base = "/fbsplayoffreform";
 
-loadNavigationBar(`${base}/reusable/nav.html`, "navbar-placeholder");
-loadNavigationBar(`${base}/reusable/season-nav.html`, "season-nav");
+$(function () {
+  $("#navbar-placeholder").load(`${base}/reusable/navbar.html`);
+});
 
-loadTable(`${base}/reusable/newyearsixtable.html`, "ny6table");
+$(function () {
+  $("#season-nav").load(`${base}/reusable/season-navbar.html`);
+});
+
+loadTable(`${base}/reusable/newyearsixtable.html", "ny6table`);
 loadTable(`${base}/reusable/homefield.html`, "homefield");
 loadTable(
   `${base}/reusable/homefieldquarterfinal.html`,
   "homefieldquarterfinal",
 );
+loadTable(`${base}/reusable/playoff-field-table.html`, "season-table");
 
 loadHeadFeature("preconnect", "https://fonts.googleapis.com");
 loadHeadFeature("preconnect", "https://fonts.gstatic.com");
@@ -184,6 +84,10 @@ loadHeadFeature("stylesheet", `${base}/css/style.css`);
 loadHeadFeature(
   "stylesheet",
   "//cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css",
+);
+loadHeadFeature(
+  "stylesheet",
+  "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
 );
 loadHeadFeature("stylesheet", `${base}/css/season-infobox.css`);
 loadHeadFeature("stylesheet", `${base}/css/bracket.css`);
