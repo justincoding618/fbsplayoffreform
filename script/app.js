@@ -83,7 +83,7 @@ loadHeadFeature(
 loadHeadFeature("stylesheet", `${base}/css/style.css`);
 loadHeadFeature(
   "stylesheet",
-  "//cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css",
+  "https://cdn.datatables.net/v/dt/dt-3.1.5/datatables.min.css",
 );
 loadHeadFeature(
   "stylesheet",
