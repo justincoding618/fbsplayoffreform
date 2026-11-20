@@ -63,6 +63,10 @@ $(function () {
 });
 
 $(function () {
+  $("#footer").load(`${base}/reusable/footer.html`);
+});
+
+$(function () {
   $("#season-nav").load(`${base}/reusable/season-navbar.html`);
 });
 
